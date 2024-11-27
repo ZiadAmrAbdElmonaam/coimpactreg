@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
@@ -11,6 +12,16 @@ export default function Hero() {
       <div className="relative pt-20 pb-16 md:pt-32 md:pb-24">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex flex-col items-center text-center">
+            <div className="mb-8 w-full max-w-[600px] dark:invert">
+              <Image
+               src="/images/coimpact-logo.png"
+                alt="COIMPACT PSMA PET & RADIOTHERAPY"
+                width={600}
+                height={150}
+                priority
+                className="w-full h-auto"
+              />
+            </div>
             <div className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium">
               🔬 International Research Consortium
             </div>

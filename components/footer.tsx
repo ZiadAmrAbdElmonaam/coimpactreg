@@ -7,9 +7,9 @@ export default function Footer() {
       <div className="container mx-auto max-w-7xl px-4 py-8 md:py-12">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/coimpactreg/sites" className="flex items-center space-x-2">
               <Activity className="h-6 w-6" />
-              <span className="font-bold">iROCK Registry</span>
+              <span className="font-bold">Coimpactreg sites</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Advancing cancer research through international collaboration
