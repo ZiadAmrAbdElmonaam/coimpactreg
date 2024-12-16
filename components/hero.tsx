@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="flex flex-col items-center text-center">
             <div className="mb-8 w-full max-w-[600px] dark:invert">
               <Image
-               src="/images/coimpact-logo.png"
+                src="/images/weblogo.png"
                 alt="COIMPACT PSMA PET & RADIOTHERAPY"
                 width={600}
                 height={150}
@@ -22,18 +22,25 @@ export default function Hero() {
                 className="w-full h-auto"
               />
             </div>
-            <div className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium">
-              🔬 International Research Consortium
-            </div>
-            <div className="mt-6 space-y-2">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                International coimpactreg
-              </h1>
-              <p className="mx-auto max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
-                Advancing research in stereotactic ablative radiotherapy for renal cell carcinoma through international
-                collaboration.
+            
+            <div className="max-w-[800px] mx-auto mb-8 text-left font-medium">
+              <p className="text-sm md:text-base leading-relaxed mb-4">
+                <span className="font-bold">Prostate cancer</span> is the most prevalent malignancy among men in the Western world, and with
+                ongoing demographic shifts, its incidence is expected to rise in the coming years. Despite
+                advancements, optimal treatment strategies for prostate cancer remain uncertain in various
+                clinical scenarios. To address this, the <span className="font-bold">Co-IMPACT consortium</span> was established by a global,
+                multidisciplinary team of experts in radiotherapy, nuclear medicine, and medical oncology.
+                Comprising <span className="font-bold">45 centers</span> across Europe, the USA, Asia, and Australia, the consortium is
+                dedicated to advancing prostate cancer care.
+              </p>
+              <p className="text-sm md:text-base leading-relaxed">
+                Through <span className="font-bold">four sub-projects (Co-IMPACT1-4)</span>, the consortium will investigate specific clinical
+                scenarios along the prostate cancer patient pathway. The aim is to define personalized
+                treatment approaches and, using advanced medical imaging such as <span className="font-bold">PSMA-PET/CT</span>, improve
+                outcomes for patients with prostate cancer.
               </p>
             </div>
+
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Button asChild size="lg">
                 <Link href="#contact">
@@ -45,11 +52,11 @@ export default function Hero() {
               </Button>
             </div>
             <div className="mt-12 w-full overflow-hidden rounded-lg border bg-background">
-              <div className="grid grid-cols-2 divide-x divide-border md:grid-cols-4">
+              <div className="grid grid-cols-1 divide-y divide-border md:grid-cols-3 md:divide-y-0 md:divide-x">
                 {stats.map((stat, index) => (
-                  <div key={index} className="p-4 md:p-8">
-                    <div className="text-2xl font-bold md:text-4xl">{stat.value}</div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 md:text-base">{stat.label}</div>
+                  <div key={index} className="p-6 md:p-8 flex flex-col items-center justify-center">
+                    <div className="text-3xl font-bold md:text-4xl text-primary">{stat.value}</div>
+                    <div className="mt-2 text-sm font-medium text-muted-foreground md:text-base">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -63,20 +70,16 @@ export default function Hero() {
 
 const stats = [
   {
-    value: "50+",
+    value: "30+",
     label: "Research Centers",
   },
   {
-    value: "1000+",
+    value: "2000+",
     label: "Patients Enrolled",
   },
   {
-    value: "25+",
+    value: "10+",
     label: "Publications",
-  },
-  {
-    value: "15+",
-    label: "Countries",
   },
 ]
 

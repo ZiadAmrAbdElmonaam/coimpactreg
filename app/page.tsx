@@ -2,7 +2,7 @@ import Contact from "@/components/contact";
 import Features from "@/components/features";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
-import Research from "@/components/research";
+// import Research from "@/components/research";
 
 export default function Home() {
   return (
@@ -10,7 +10,6 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Features />
-        <Research />
         <Contact />
       </main>
       <Footer />
@@ -18,3 +17,4 @@ export default function Home() {
   )
 }
 
+{/* <Research /> */}

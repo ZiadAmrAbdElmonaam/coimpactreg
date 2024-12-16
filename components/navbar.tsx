@@ -40,7 +40,7 @@ export function Navbar() {
                         href="#"
                       >
                         <Activity className="h-6 w-6" />
-                        <div className="mb-2 mt-4 text-lg font-medium">SABR Research</div>
+                        <div className="mb-2 mt-4 text-lg font-medium">PSMA PET</div>
                         <p className="text-sm leading-tight text-muted-foreground">
                           Investigating stereotactic ablative radiotherapy outcomes for kidney cancer patients.
                         </p>

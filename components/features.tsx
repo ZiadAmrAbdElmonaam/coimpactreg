@@ -1,20 +1,34 @@
 import { Activity, BookOpen, Globe2, Users } from 'lucide-react'
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from 'next/link'
 
 export default function Features() {
   return (
-    <section id="features" className="container mx-auto max-w-7xl px-4 py-16 md:py-24">
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <section id="features" className="container mx-auto max-w-7xl px-4 py-8 md:py-12">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {features.map((feature, index) => (
-          <Card key={index}>
-            <CardHeader>
-              <feature.icon className="h-12 w-12 text-primary" />
-              <CardTitle className="mt-4">{feature.title}</CardTitle>
-              <CardDescription>{feature.description}</CardDescription>
-            </CardHeader>
-            <CardContent>{feature.content}</CardContent>
-          </Card>
+          <div 
+            key={index} 
+            className="group relative bg-card hover:bg-accent rounded-lg p-4 transition-colors border"
+          >
+            {feature.link ? (
+              <Link 
+                href={feature.link} 
+                className="flex flex-col items-center text-center space-y-3"
+              >
+                <feature.icon className="h-6 w-6 text-primary" />
+                <h3 className="font-semibold text-sm group-hover:text-primary transition-colors">
+                  {feature.title}
+                </h3>
+              </Link>
+            ) : (
+              <div className="flex flex-col items-center text-center space-y-3">
+                <feature.icon className="h-6 w-6 text-primary" />
+                <h3 className="font-semibold text-sm">
+                  {feature.title}
+                </h3>
+              </div>
+            )}
+          </div>
         ))}
       </div>
     </section>
@@ -24,30 +38,20 @@ export default function Features() {
 const features = [
   {
     icon: Activity,
-    title: "SABR Research",
-    description: "Leading research in stereotactic ablative radiotherapy",
-    content:
-      "Our consortium focuses on evaluating treatment outcomes and recurrence patterns in renal cell carcinoma patients treated with SABR.",
+    title: "PSMA PET based Radiotherapy",
   },
   {
     icon: Globe2,
     title: "International Collaboration",
-    description: "Global network of research centers",
-    content:
-      "We bring together leading institutions from around the world to advance our understanding of kidney cancer treatment.",
+    link: "/coimpactreg/sites"
   },
   {
     icon: BookOpen,
-    title: "Data Registry",
-    description: "Comprehensive patient data collection",
-    content:
-      "Our registry maintains detailed records of treatment outcomes, helping to improve future patient care and research.",
+    title: "Data Registry"
   },
   {
     icon: Users,
     title: "Expert Network",
-    description: "Connect with leading researchers",
-    content: "Join a network of dedicated professionals working to advance cancer treatment through collaborative research.",
   },
 ]
 
