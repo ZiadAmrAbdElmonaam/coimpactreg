@@ -20,7 +20,7 @@ export function Navbar() {
       <div className="container flex h-16 items-center">
         <Link href="/" className="flex items-center space-x-2">
           <Activity className="h-6 w-6 text-primary" />
-          <span className="text-xl font-bold">iROCK Registry</span>
+          <span className="text-xl font-bold">CoImpact Registry</span>
         </Link>
         <NavigationMenu className="ml-auto">
           <NavigationMenuList>

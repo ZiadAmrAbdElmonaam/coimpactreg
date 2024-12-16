@@ -82,7 +82,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 iROCK Registry. All rights reserved.</p>
+          <p>© 2024 CoImpact Registry. All rights reserved.</p>
         </div>
       </div>
     </footer>
