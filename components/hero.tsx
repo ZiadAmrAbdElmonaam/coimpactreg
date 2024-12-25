@@ -46,7 +46,7 @@ export default function Hero() {
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Button asChild size="lg">
-                <Link href="#contact">
+                <Link href="/register">
                   Join Registry <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
