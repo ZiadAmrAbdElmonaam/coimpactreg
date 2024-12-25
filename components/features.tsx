@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Features() {
   return (
-    <section className="container mx-auto max-w-7xl px-4 -mt-8 mb-16">
+    <section className=" mx-auto max-w-7xl px-4 -mt-8 mb-16">
       <div className="p-4">
         <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
           {features.map((feature, index) => (
