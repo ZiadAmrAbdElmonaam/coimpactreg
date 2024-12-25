@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="flex flex-col items-center space-y-4">
             <Link href="/coimpact/sites" className="flex items-center space-x-2">
               <Activity className="h-6 w-6" />
-              <span className="font-bold">Coimpact sites</span>
+              <span className="font-bold"><strong>CO-IMPACT</strong> Sites</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs mx-auto">
               Advancing cancer research through international collaboration

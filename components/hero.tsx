@@ -4,12 +4,13 @@ import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import Features from "./features"
 
 export default function Hero() {
   return (
     <div className="relative">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-950 dark:to-indigo-950" />
-      <div className="relative pt-20 pb-16 md:pt-32 md:pb-24">
+      <div className="relative pt-20 pb-8 md:pt-32 md:pb-16">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex flex-col items-center text-center">
             <div className="mb-8 w-full max-w-[600px] dark:invert">
@@ -22,6 +23,8 @@ export default function Hero() {
                 className="w-full h-auto"
               />
             </div>
+            
+            <Features />
             
             <div className="max-w-[800px] mx-auto mb-8 text-left text-justify font-medium">
               <p className="text-sm md:text-base leading-relaxed mb-4">
