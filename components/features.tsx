@@ -43,7 +43,7 @@ const features = [
   {
     icon: Globe2,
     title: "International Collaboration",
-    link: "/coimpactreg/sites"
+    link: "/coimpact/sites"
   },
   {
     icon: BookOpen,
@@ -52,6 +52,7 @@ const features = [
   {
     icon: Users,
     title: "Expert Network",
+    link: "/expert-network"
   },
 ]
 

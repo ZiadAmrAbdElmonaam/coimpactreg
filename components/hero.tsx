@@ -23,7 +23,7 @@ export default function Hero() {
               />
             </div>
             
-            <div className="max-w-[800px] mx-auto mb-8 text-left font-medium">
+            <div className="max-w-[800px] mx-auto mb-8 text-left text-justify font-medium">
               <p className="text-sm md:text-base leading-relaxed mb-4">
                 <span className="font-bold">Prostate cancer</span> is the most prevalent malignancy among men in the Western world, and with
                 ongoing demographic shifts, its incidence is expected to rise in the coming years. Despite
