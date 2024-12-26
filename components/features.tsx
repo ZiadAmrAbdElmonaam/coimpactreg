@@ -1,4 +1,4 @@
-import { Activity, BookOpen, Globe2, Users } from 'lucide-react'
+import { BookOpen, Globe2, Users, ScrollText } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
@@ -53,7 +53,7 @@ export default function Features() {
 
 const features = [
   {
-    icon: Activity,
+    icon: Users,
     title: <><strong>CO-IMPACT Team</strong></>,
     link: "/expert-network"
   },
@@ -68,7 +68,7 @@ const features = [
     link: "/publications"
   },
   {
-    icon: Users,
+    icon: ScrollText,
     title: "Guidelines",
     link: "/guidelines"
   },
