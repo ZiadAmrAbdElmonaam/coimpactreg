@@ -23,7 +23,7 @@ export default function MeetingsPage() {
           'DSC04756.jpg',
           'DSC04771.jpg'
         ].map((image, index) => (
-          <div key={index} className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 shadow-md hover:shadow-xl">
+          <div key={index} className="group bg-card dark:bg-gray-800 rounded-xl overflow-hidden border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 shadow-md hover:shadow-xl">
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src={`/images/${image}`}

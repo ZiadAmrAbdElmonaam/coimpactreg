@@ -6,11 +6,31 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import Flag from 'react-world-flags'
 
 interface Site {
   country: string
   city: string
   hospital: string
+}
+
+// Add a mapping for country codes
+const countryToCode: { [key: string]: string } = {
+  "Switzerland": "CHE",
+  "Germany": "DEU",
+  "Cyprus": "CYP",
+  "Australia": "AUS",
+  "Austria": "AUT",
+  "Italy": "ITA",
+  "USA": "USA",
+  "UK": "GBR",
+  "Netherlands": "NLD",
+  "China": "CHN",
+  "France": "FRA",
+  "Canada": "CAN",
+  "India": "IND",
+  "Poland": "POL",
+  "Turkey": "TUR",
 }
 
 const sites: Site[] = [
@@ -23,9 +43,9 @@ const sites: Site[] = [
   { country: "Switzerland", city: "Baden", hospital: "Cantonal Hospital Baden" },
   { country: "Germany", city: "Freiburg", hospital: "University Hospital Freiburg" },
   { country: "Germany", city: "Dresden", hospital: "University Hospital Dresden"},
-  { country: "Germany", city: "Munich 1", hospital: "Technical University of Munich" },
-  { country: "Germany", city: "Munich 2", hospital: "Ludwig Maximilian University of Munich" },
-  { country: "Germany", city: "Ulm", hospital: "University Hospital Of Ulm" },
+  { country: "Germany", city: "Munich", hospital: "Technical University of Munich" },
+  { country: "Germany", city: "Munich", hospital: "Ludwig Maximilian University of Munich" },
+  { country: "Germany", city: "Ulm", hospital: "University Hospital of Ulm" },
   { country: "Germany", city: "Heidelberg", hospital: "Heidelberg University Hospital" },
   { country: "Germany", city: "Regensburg", hospital: "Hospital of Barmherzige Brüder Regensburg" },
   { country: "Germany", city: "Hannover", hospital: "Hannover Medical School"},
@@ -70,15 +90,15 @@ export default function SitesGrid() {
           className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2"
         >
           <CardHeader className="pb-3">
-            <CardTitle className="text-xl font-bold leading-tight text-primary">
+            <CardTitle className="text-lg font-bold leading-tight text-primary">
               {site.hospital}
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-1.5">
+            <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <svg 
-                  className="w-4 h-4 text-muted-foreground"
+                  className="w-4 h-4 text-muted-foreground flex-shrink-0"
                   xmlns="http://www.w3.org/2000/svg" 
                   fill="none" 
                   viewBox="0 0 24 24" 
@@ -88,19 +108,18 @@ export default function SitesGrid() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
-                <p className="font-medium text-base">{site.city}</p>
+                <p className="font-medium text-sm">{site.city}</p>
               </div>
               <div className="flex items-center gap-2">
-                <svg 
-                  className="w-4 h-4 text-muted-foreground"
-                  xmlns="http://www.w3.org/2000/svg" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  strokeWidth={1.5} 
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
-                </svg>
+                <div className="w-4 h-3 flex-shrink-0 overflow-hidden">
+                  <Flag 
+                    code={countryToCode[site.country]} 
+                    height="12" 
+                    width="16"
+                    className="object-cover w-full h-full rounded-[1px] shadow-sm"
+                    fallback={<span className="w-full h-full bg-gray-200 rounded-[1px]" />}
+                  />
+                </div>
                 <p className="text-sm text-muted-foreground">{site.country}</p>
               </div>
             </div>

@@ -19,7 +19,7 @@ export default function PublicationsPage() {
             <h2 className="text-2xl font-bold mb-6">{year}</h2>
             <div className="space-y-8">
               {pubs.map((pub: Publication, index) => (
-                <div key={index} className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div key={index} className="p-6 bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-baseline gap-3 mb-2">
                     <span className="text-sm font-semibold text-gray-500">{index + 1}.</span>
                     {pub.titleUrl ? (
