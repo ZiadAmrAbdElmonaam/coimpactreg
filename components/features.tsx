@@ -1,4 +1,4 @@
-import { BookOpen, Globe2, Users, ScrollText } from 'lucide-react'
+import { BookOpen, Globe2, Users, ScrollText, Calendar } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
@@ -6,7 +6,7 @@ export default function Features() {
   return (
     <section className=" mx-auto max-w-7xl px-4 -mt-8 mb-16">
       <div className="p-4">
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -18,7 +18,7 @@ export default function Features() {
               {feature.link ? (
                 <Link
                   href={feature.link}
-                  className="group flex flex-col items-center text-center p-2 space-y-2 hover:text-primary transition-all duration-300"
+                  className="group flex flex-col items-center text-center p-2 space-y-2 text-gray-900 hover:text-blue-900 dark:text-gray-100 dark:hover:text-blue-100 transition-all duration-300"
                 >
                   <motion.div
                     whileHover={{ rotate: 360 }}
@@ -31,7 +31,7 @@ export default function Features() {
                   </h3>
                 </Link>
               ) : (
-                <div className="group flex flex-col items-center text-center p-2 space-y-2">
+                <div className="group flex flex-col items-center text-center p-2 space-y-2 text-gray-900 dark:text-gray-100">
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
@@ -64,7 +64,7 @@ const features = [
   },
   {
     icon: BookOpen,
-    title: "Publications",
+    title: <><strong>Publications</strong></>,
     link: "/publications"
   },
   {
@@ -72,5 +72,10 @@ const features = [
     title: "Guidelines",
     link: "/guidelines"
   },
+  {
+    icon: Calendar,
+    title: "Meetings",
+    link: "/meetings"
+  }
 ]
 

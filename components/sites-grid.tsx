@@ -24,9 +24,9 @@ const sites: Site[] = [
   { country: "Germany", city: "Freiburg", hospital: "Uniklinik Freiburg" },
   { country: "Germany", city: "Dresden", hospital: "Uniklinik Dresden" },
   { country: "Germany", city: "Munich 1", hospital: "TU Muenchen" },
-  { country: "Germany", city: "Munich 2", hospital: "LMU Muenchen" },
+  { country: "Germany", city: "Munich 2", hospital: "Ludwig Maximilian University of Munich" },
   { country: "Germany", city: "Ulm", hospital: "Uniklinik Ulm" },
-  { country: "Germany", city: "Heidelberg", hospital: "Uniklinik Heidelberg" },
+  { country: "Germany", city: "Heidelberg", hospital: "Heidelberg University Hospital" },
   { country: "Germany", city: "Regensburg", hospital: "Klinikum BB Regensburg" },
   { country: "Germany", city: "Hannover", hospital: "Medizinische Hochschule Hannover" },
   { country: "Germany", city: "Essen", hospital: "Essen University Hospital" },
@@ -59,8 +59,6 @@ const sites: Site[] = [
   { country: "India", city: "Mumbai", hospital: "Tata Memorial Hospital" },
   { country: "Poland", city: "Gliwice", hospital: "Maria Sklodowska-Curie National Research Institute of Oncology" },
   { country: "Turkey", city: "Adana", hospital: "Baskent University Faculty of Medicine, Adana Dr. Turgut Noyan Research and Treatment Centre, Department of Radiation Oncology" },
-  { country: "External", city: "Multiple", hospital: "External collective for comparison of non-PSMA-PET guided radiotherapy in the oligometastatic setting" },
-  { country: "USA", city: "Boston/Philadelphia", hospital: "Massachusetts General Hospital – Harvard Medical School / University of Pennsylvania" }
 ]
 
 export default function SitesGrid() {

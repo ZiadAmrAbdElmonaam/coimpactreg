@@ -10,10 +10,14 @@ export default function Hero() {
   return (
     <div className="relative">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-950 dark:to-indigo-950" />
-      <div className="relative pt-20 pb-8 md:pt-32 md:pb-16">
+      <div className="relative pt-8 pb-8 md:pt-16 md:pb-16">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex flex-col items-center text-center">
-            <div className="mb-8 w-full max-w-[600px] dark:invert">
+            <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center text-blue-900 dark:text-blue-100 max-w-[800px]">
+              Consortium for Implementation of PSMA-PET in Prostate Cancer therapy Trials
+            </h1>
+
+            <div className="mb-6 w-full max-w-[600px] dark:invert">
               <Image
                 src="/images/weblogo.png"
                 alt="COIMPACT PSMA PET & RADIOTHERAPY"
@@ -33,7 +37,7 @@ export default function Hero() {
                 advancements, optimal treatment strategies for prostate cancer remain uncertain in various
                 clinical scenarios. To address this, the <span className="font-bold">Co-IMPACT consortium</span> was established by a global,
                 multidisciplinary team of experts in radiotherapy, nuclear medicine, and medical oncology.
-                Comprising <span className="font-bold">45 centers</span> across Europe, the USA, Asia, and Australia, the consortium is
+                Comprising <span className="font-bold">40 +</span> across Europe, the USA, Asia, and Australia, the consortium is
                 dedicated to advancing prostate cancer care.
               </p>
               <p className="text-sm md:text-base leading-relaxed">
@@ -45,7 +49,7 @@ export default function Hero() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="bg-blue-900 hover:bg-blue-800 text-white">
                 <Link href="/register">
                   Join Registry <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -73,12 +77,12 @@ export default function Hero() {
 
 const stats = [
   {
-    value: "30+",
+    value: "40+",
     label: "Research Centers",
   },
   {
     value: "2000+",
-    label: "Patients Enrolled",
+    label: "Patients",
   },
   {
     value: "10+",
