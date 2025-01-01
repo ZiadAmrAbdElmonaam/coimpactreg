@@ -37,7 +37,7 @@ export default function Hero() {
                 advancements, optimal treatment strategies for prostate cancer remain uncertain in various
                 clinical scenarios. To address this, the <span className="font-bold">Co-IMPACT consortium</span> was established by a global,
                 multidisciplinary team of experts in radiotherapy, nuclear medicine, and medical oncology.
-                Comprising <span className="font-bold">40 +</span> across Europe, the USA, Asia, and Australia, the consortium is
+                Comprising <span className="font-bold">more than 40</span> centers across Europe, the USA, Asia, and Australia, the consortium is
                 dedicated to advancing prostate cancer care.
               </p>
               <p className="text-sm md:text-base leading-relaxed">
