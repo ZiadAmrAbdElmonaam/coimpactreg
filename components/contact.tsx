@@ -24,7 +24,7 @@ export default function Contact() {
 
     const form = e.currentTarget
     const formData = {
-      name: form.name.value,
+      name: form.name.valueOf,
       email: form.email.value,
       institution: form.institution.value,
       message: form.message.value,
@@ -49,6 +49,7 @@ export default function Contact() {
       })
       form.reset()
     } catch (error) {
+      console.error(error)
       setNotification({
         type: 'error',
         message: 'Failed to send message. Please try again.'
