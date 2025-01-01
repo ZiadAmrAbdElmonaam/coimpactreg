@@ -24,10 +24,10 @@ export default function Contact() {
 
     const form = e.currentTarget
     const formData = {
-      name: form.name.valueOf,
-      email: form.email.value,
-      institution: form.institution.value,
-      message: form.message.value,
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      institution: (form.elements.namedItem('institution') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
     }
 
     try {
