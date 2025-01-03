@@ -54,7 +54,7 @@ export default function Features() {
 const features = [
   {
     icon: Users,
-    title: <><strong>CO-IMPACT Team</strong></>,
+    title: <><strong>CO-IMPACT</strong> Team</>,
     link: "/expert-network"
   },
   {
@@ -64,7 +64,7 @@ const features = [
   },
   {
     icon: BookOpen,
-    title: <><strong>Publications</strong></>,
+    title: "Publications",
     link: "/publications"
   },
   {

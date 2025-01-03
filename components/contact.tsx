@@ -60,18 +60,18 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="container mx-auto max-w-7xl px-4 py-16 md:py-24">
+    <section id="contact" className="container mx-auto max-w-7xl px-4 py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="mx-auto max-w-2xl">
-        <Card>
-          <CardHeader>
-            <CardTitle>Contact Us</CardTitle>
-            <CardDescription>
+        <Card className="border-0 shadow-lg">
+          <CardHeader className="text-center space-y-4">
+            <CardTitle className="text-3xl font-bold tracking-tight text-gray-900">Contact Us</CardTitle>
+            <CardDescription className="text-lg text-gray-600 max-w-xl mx-auto">
               Get in touch with our research team or inquire about joining the registry.
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="px-6 py-8">
             {notification && (
-              <div className={`p-4 mb-4 rounded-md ${
+              <div className={`p-4 mb-6 rounded-lg ${
                 notification.type === 'success' 
                   ? 'bg-green-50 text-green-700 border border-green-200' 
                   : 'bg-red-50 text-red-700 border border-red-200'
@@ -79,34 +79,69 @@ export default function Contact() {
                 {notification.message}
               </div>
             )}
-            <form onSubmit={handleSubmit}>
-              <div className="grid gap-4">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid gap-6">
                 <div className="grid gap-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" name="name" placeholder="Enter your name" required />
+                  <Label htmlFor="name" className="text-sm font-medium text-gray-700">Name</Label>
+                  <Input 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your name" 
+                    required 
+                    className="h-11 px-4 transition-colors focus:border-blue-500"
+                  />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" placeholder="Enter your email" type="email" required />
+                  <Label htmlFor="email" className="text-sm font-medium text-gray-700">Email</Label>
+                  <Input 
+                    id="email" 
+                    name="email" 
+                    placeholder="Enter your email" 
+                    type="email" 
+                    required 
+                    className="h-11 px-4 transition-colors focus:border-blue-500"
+                  />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="institution">Institution</Label>
-                  <Input id="institution" name="institution" placeholder="Enter your institution" required />
+                  <Label htmlFor="institution" className="text-sm font-medium text-gray-700">Institution</Label>
+                  <Input 
+                    id="institution" 
+                    name="institution" 
+                    placeholder="Enter your institution" 
+                    required 
+                    className="h-11 px-4 transition-colors focus:border-blue-500"
+                  />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message" className="text-sm font-medium text-gray-700">Message</Label>
                   <Textarea
                     id="message"
                     name="message"
                     placeholder="Enter your message"
-                    className="min-h-[100px]"
+                    className="min-h-[120px] px-4 py-3 transition-colors focus:border-blue-500 resize-none"
                     required
                   />
                 </div>
               </div>
-              <div className="mt-6">
-                <Button className="w-full" type="submit" disabled={isLoading}>
-                  {isLoading ? "Sending..." : "Send Message"}
+              <div className="pt-4">
+                <Button 
+                  className="w-full h-12 text-base font-medium bg-[#1a365d] hover:bg-[#2d4a7c] transition-all duration-300 
+                  transform hover:scale-[1.02] hover:shadow-lg disabled:bg-[#1a365d]/70 disabled:cursor-not-allowed
+                  text-white rounded-md focus:ring-2 focus:ring-[#1a365d]/50 focus:ring-offset-2" 
+                  type="submit" 
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    <span className="flex items-center justify-center space-x-2">
+                      <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
+                      </svg>
+                      <span>Sending...</span>
+                    </span>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </div>
             </form>
