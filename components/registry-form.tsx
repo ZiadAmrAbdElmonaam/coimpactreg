@@ -34,10 +34,37 @@ export default function RegistryForm() {
     references: ""
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log(formData)
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          formType: 'registry',
+          formData
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send application')
+      }
+
+      setSubmitStatus('success')
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -200,8 +227,20 @@ export default function RegistryForm() {
             </div>
           </form>
         </CardContent>
-        <CardFooter>
-          <Button onClick={handleSubmit} className="w-full">Submit Application</Button>
+        <CardFooter className="flex flex-col gap-4">
+          <Button 
+            onClick={handleSubmit} 
+            className="w-full" 
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Submitting...' : 'Submit Application'}
+          </Button>
+          {submitStatus === 'success' && (
+            <p className="text-green-600 text-center">Application submitted successfully!</p>
+          )}
+          {submitStatus === 'error' && (
+            <p className="text-red-600 text-center">Failed to submit application. Please try again.</p>
+          )}
         </CardFooter>
       </Card>
     </section>
