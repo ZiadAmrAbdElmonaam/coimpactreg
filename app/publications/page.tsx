@@ -10,31 +10,40 @@ interface Publication {
 export default function PublicationsPage() {
   return (
     <div className="container mx-auto max-w-4xl px-4 py-12">
-      <h1 className="text-3xl font-bold mb-8">Publications</h1>
+      <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Publications</h1>
       <div className="space-y-12">
         {Object.entries(publicationsByYear)
           .sort((a, b) => Number(b[0]) - Number(a[0]))
           .map(([year, pubs]) => (
           <div key={year}>
-            <h2 className="text-2xl font-bold mb-6">{year}</h2>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{year}</h2>
             <div className="space-y-8">
               {pubs.map((pub: Publication, index) => (
-                <div key={index} className="p-6 bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div key={index} className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-baseline gap-3 mb-2">
-                    <span className="text-sm font-semibold text-gray-500">{index + 1}.</span>
+                    <span className="text-sm font-semibold text-gray-500 dark:text-gray-400">{index + 1}.</span>
                     {pub.titleUrl ? (
-                      <a href={pub.titleUrl} target="_blank" rel="noopener noreferrer" className="text-lg font-medium text-blue-600 hover:text-blue-800">
+                      <a 
+                        href={pub.titleUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-lg font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                      >
                         {pub.title}
                       </a>
                     ) : (
-                      <h3 className="text-lg font-medium text-gray-900">{pub.title}</h3>
+                      <h3 className="text-lg font-medium text-gray-900 dark:text-white">{pub.title}</h3>
                     )}
                   </div>
-                  <p className="text-sm text-gray-600 mb-2">{pub.authors}</p>
-                  <p className="text-sm font-medium text-gray-800">{pub.journal}</p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">{pub.authors}</p>
+                  <p className="text-sm font-medium text-gray-800 dark:text-gray-200">{pub.journal}</p>
                   <div className="mt-2 flex items-center gap-4">
-                    <span className="text-sm text-gray-500">DOI: {pub.doi}</span>
-                    {pub.pmid && <span className="text-sm text-gray-500">PMID: {pub.pmid}</span>}
+                    <span className="text-sm text-gray-600 dark:text-gray-400">DOI: {pub.doi}</span>
+                    {pub.pmid && (
+                      <span className="text-sm text-gray-600 dark:text-gray-400">
+                        PMID: {pub.pmid}
+                      </span>
+                    )}
                   </div>
                 </div>
               ))}
