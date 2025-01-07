@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import NavButton from "@/components/nav-button";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
   weight: "100 900",
 });
 
@@ -21,10 +17,6 @@ export const metadata: Metadata = {
     icon: "/images/coimpact.png",
     shortcut: "/images/coimpact.png",
     apple: "/images/coimpact.png",
-    other: {
-      rel: "icon",
-      url: "/images/coimpact.png",
-    },
   },
 };
 
@@ -34,12 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NavButton />
-        {children}
+    <html lang="en" className="scroll-smooth">
+      <body className={`${geistSans.variable} antialiased`}>
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );

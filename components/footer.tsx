@@ -1,68 +1,65 @@
-import { Activity } from "lucide-react"
-import Link from "next/link"
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-muted/40">
-      <div className="container mx-auto max-w-7xl px-4 py-8 md:py-12">
-        <div className="grid gap-12 text-center md:grid-cols-3">
-          <div className="flex flex-col items-center space-y-4">
-            <Link href="/coimpact/sites" className="flex items-center space-x-2">
-              <Activity className="h-6 w-6" />
-              <span className="font-bold"><strong>CO-IMPACT</strong> Sites</span>
-            </Link>
-            <p className="text-sm text-muted-foreground max-w-xs mx-auto">
-              Advancing cancer research through international collaboration
+    <footer className="bg-white dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <Image
+              src="/images/coimpact.png"
+              alt="CO-IMPACT Logo"
+              width={150}
+              height={50}
+              className="h-12 w-auto mb-4"
+            />
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
+              Consortium for Implementation of PSMA-PET
+              <br />
+              in Prostate Cancer therapy Trials
             </p>
           </div>
-          <div className="flex flex-col items-center space-y-4">
-            <h3 className="font-semibold">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Guidelines
-                </Link>
-              </li>
-              <li>
-                <Link href="/publications" className="text-muted-foreground hover:text-foreground">
-                  Publications
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Contact
-                </Link>
-              </li>
+          
+          <div>
+            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Quick Links</h3>
+            <ul className="mt-4 space-y-4">
+              {[
+                ['Home', '/'],
+                ['Expert Network', '/expert-network'],
+                ['Publications', '/publications'],
+                ['Guidelines', '/guidelines'],
+              ].map(([name, href]) => (
+                <li key={name}>
+                  <Link
+                    href={href}
+                    className="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                  >
+                    {name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="flex flex-col items-center space-y-4">
-            <h3 className="font-semibold">Legal</h3>
-            <ul className="space-y-2 text-sm">
+          
+          <div>
+            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Contact</h3>
+            <ul className="mt-4 space-y-4">
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Cookie Policy
-                </Link>
+                <a
+                  href="mailto:Mohamed.shelan@insel.ch"
+                  className="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                >
+                  Contact Us via form
+                </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 CoImpact Registry. All rights reserved.</p>
+        <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8">
+          <p className="text-center text-base text-gray-400">
+            &copy; {new Date().getFullYear()} CO-IMPACT Registry. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
