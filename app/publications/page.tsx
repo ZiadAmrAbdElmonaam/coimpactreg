@@ -10,7 +10,9 @@ interface Publication {
 export default function PublicationsPage() {
   return (
     <div className="container mx-auto max-w-4xl px-4 py-12">
-      <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Publications</h1>
+      <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+        <strong>CO-IMPACT</strong> Publications
+      </h1>
       <div className="space-y-12">
         {Object.entries(publicationsByYear)
           .sort((a, b) => Number(b[0]) - Number(a[0]))

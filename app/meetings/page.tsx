@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 export default function MeetingsPage() {
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center mb-8">Project Meetings</h1>
+      <h1 className="text-4xl font-bold text-center mb-8">
+        <strong>CO-IMPACT</strong> Project Meetings
+      </h1>
       <p className="text-lg text-center mb-12 text-gray-600 dark:text-gray-300">
         Highlights from our CO-IMPACT project meetings and events
       </p>

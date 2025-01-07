@@ -3,7 +3,9 @@ import React from 'react'
 export default function ExpertNetwork() {
   return (
     <div className="container mx-auto max-w-4xl px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Expert Network</h1>
+      <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+        <strong>CO-IMPACT</strong> Expert Network
+      </h1>
       <p className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">International Group of Investigators</p>
       
       <div className="space-y-8">

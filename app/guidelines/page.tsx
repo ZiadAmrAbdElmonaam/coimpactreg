@@ -19,7 +19,7 @@ export default function Guidelines() {
           {/* Title */}
           <div className="text-center mb-12">
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Consortium for Implementation of PSMA-PET in Prostate Cancer therapy Trials (Co-IMPACT) – standard operating procedures
+              <strong>CO-IMPACT</strong> – Standard Operating Procedures
             </h1>
           </div>
 

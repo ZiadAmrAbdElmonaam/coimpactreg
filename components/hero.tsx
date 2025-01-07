@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex flex-col items-center text-center">
             <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center text-blue-900 dark:text-blue-100 max-w-[800px]">
-              Consortium for Implementation of PSMA-PET in Prostate Cancer therapy Trials
+              <strong>CO-IMPACT</strong> Registry
             </h1>
 
             <div className="mb-6 w-full max-w-[600px] dark:invert">

@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   title: "CO-IMPACT Registry | PSMA PET & Radiotherapy",
   description: "Consortium for Implementation of PSMA-PET in Prostate Cancer therapy Trials",
   icons: {
-    icon: [
-      {
-        url: "/favicon.png",
-        type: "image/png",
-      }
-    ],
-    apple: "/apple-icon.png",
+    icon: "/images/coimpact.png",
+    shortcut: "/images/coimpact.png",
+    apple: "/images/coimpact.png",
+    other: {
+      rel: "icon",
+      url: "/images/coimpact.png",
+    },
   },
 };
 
