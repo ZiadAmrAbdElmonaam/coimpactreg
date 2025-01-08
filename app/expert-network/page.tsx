@@ -26,9 +26,9 @@ const projects: ProjectSection[] = [
         email: "marco.vogel@tum.de"
       },
       {
-        name: "Dr. Stephanie A. Kroeze",
-        affiliation: "Department of Radiation Oncology, Hospital Aarau, Aarau, Switzerland",
-        email: "stephanie.kroeze@ksa.ch"
+        name: "Dr. Stephanie G.C. Kroeze",
+        affiliation: "Radiation Oncology Center Mittelland, Canton Hospital Aarau, Aarau, Switzerland",
+        email: "stephanie.thoma@ksa.ch "
       },
       {
         name: "Dr. Giulia Marvaso",

@@ -54,9 +54,9 @@ export default function Hero() {
                   Join Registry <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg">
+              {/* <Button variant="outline" size="lg">
                 Learn More
-              </Button>
+              </Button> */}
             </div>
             <div className="mt-12 w-full overflow-hidden rounded-lg border bg-background">
               <div className="grid grid-cols-1 divide-y divide-border md:grid-cols-3 md:divide-y-0 md:divide-x">

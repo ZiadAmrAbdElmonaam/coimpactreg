@@ -43,17 +43,14 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Contact</h3>
-            <ul className="mt-4 space-y-4">
-              <li>
-                <a
-                  href="mailto:Mohamed.shelan@insel.ch"
-                  className="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-                >
-                  Contact Us via form
-                </a>
-              </li>
-            </ul>
+            <h3 className="text-sm  text-gray-400  tracking-wider">
+              <a 
+                href="mailto:Mohamed.shelan@insel.ch, Constantinos.Zamboglou@goc.com.cy"
+                className="hover:text-gray-900 dark:hover:text-white"
+              >
+                Contact us
+              </a>
+            </h3>
           </div>
         </div>
         <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8">
